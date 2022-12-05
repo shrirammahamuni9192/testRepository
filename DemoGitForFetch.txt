@@ -1,6 +1,11 @@
 few changes
 This is demo for fetch command.  
-File created on server and fetching it to local.
+File created on server and 
+changes in betweeen
+fetching it to local.
 
 
 Local changes
+
+
+added new lines for testing
