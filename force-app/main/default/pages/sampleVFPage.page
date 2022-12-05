@@ -1,0 +1,102 @@
+<apex:page controller="GetLeaveDetailsController" showHeader="false" standardStylesheets="false" sidebar="false" docType="html-5.0" applyBodyTag="False" applyHtmlTag="False">
+    <apex:form id="CreateLeave">
+        <head>
+            <title></title>
+            <apex:slds /> 
+        </head>
+        
+        <body class="slds-scope">
+            <!-- MASTHEAD -->
+            <p class="slds-text-heading--label slds-m-bottom--small">
+                Leave Application
+            </p>
+            <!-- / MASTHEAD -->
+            
+            <!-- PAGE HEADER -->
+            <!--p class="slds-text-title_caps slds-line-height--reset">Application Id</p-->
+            <!--h1 class="slds-page-header__title slds-truncate" title="Leave Id ">{!leaveRec.Name }</h1-->
+            <div>
+                <div class="slds-panel slds-grid slds-grid--vertical slds-nowrap">
+                    <div class="slds-form--stacked slds-grow slds-scrollable--y">
+                        <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+                            
+                            <thead>
+                                <tr class="slds-text-title--caps"> 
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="Id">
+                                            Id
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="Name">
+                                            Name
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="StageName">
+                                            StageName
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="Comments">
+                                            Comments
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <apex:repeat value="{!leaveRecList}" var="record">
+                                    <tr>
+                                        <td data-label="{!record.Id}">
+                                            <div class="slds-truncate" title="{!record.Id}">
+                                                <apex:outputField value="{! record.Id }"/>
+                                            </div>
+                                        </td>
+                                        <td data-label="{!record.Name}">
+                                            <div class="slds-truncate" title="{!record.Name}">
+                                                <apex:outputField value="{! record.Name }"/>
+                                            </div>
+                                        </td>
+                                        <td data-label="{!record.Status__c}">
+                                            <div class="slds-form-element slds-hint-parent"> 
+                                                <apex:inputField ignoreEditPermissionForRendering="true" value="{!record.Status__c}" id="recordStatus" required="true" html-oninput="validate();">
+                                                    <apex:actionSupport event="onchange" reRender="err1" status="status"/>
+                                                </apex:inputField>
+                                            </div>
+                                            <div id="err1"></div>
+                                        </td>
+                                        <td data-label="{!record.Description }">
+                                            <div class="slds-truncate" title="{!record.Description }">
+                                                <div class="requiredBlock"></div>
+                                                <apex:inputField ignoreEditPermissionForRendering="true" value="{! record.Description}"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </apex:repeat>
+                            </tbody>
+                            
+                        </table>
+                        
+                    </div>
+                    <apex:commandButton value="Save"  onclick="validate();" action="{!save}"  />
+                </div>
+            </div>
+        </body>
+        
+    </apex:form>  
+    <script type="text/javascript">
+    function validate()
+    {
+        console.dir('{!leaveRecList}');
+        var accList = '{!leaveRecList}';
+        accList.forEach(myfunc);
+        
+        
+    }
+    function myfunc(item){
+        console.log(item);
+    }
+    
+    </script>
+    
+</apex:page>

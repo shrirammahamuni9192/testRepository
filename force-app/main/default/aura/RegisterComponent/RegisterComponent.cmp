@@ -1,0 +1,23 @@
+<aura:component controller="RegisterContactController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="newContact" type="Contact" access="public"/>
+    <aura:attribute name="fName" type="String" access="public"/>
+    <aura:attribute name="lName" type="String" access="public"/>
+    <aura:attribute name="eMail" type="String" access="public"/>
+    <aura:attribute name="showFirstPage" type="Boolean" access="public" default="true"/>
+    <aura:attribute name="newContactId" type="String"/>
+  <!--   <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    Display the new contact form -->
+    <div class="Create Contact">
+        <lightning:card iconName="action:new_contact" title="Create Contact">
+            <div class="slds-p-horizontal--small">
+                <lightning:input  label="First Name" value="{!v.fName}" required = "true"/>
+                <lightning:input  label="Last Name" value="{!v.lName}" required = "true"/>
+                <lightning:input  label="Email" value="{!v.eMail}" required="true"/>
+                <br/>
+                <lightning:button label="Submit" variant="brand" onclick="{!c.handleSaveContact}"/>
+            </div>
+        </lightning:card>
+    </div>
+    
+</aura:component>
