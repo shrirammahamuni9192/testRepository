@@ -1,4 +1,4 @@
-//Controller for GetLeaveDetailsController component
+//Controller for GetLeaveDetailsController component.
 
 public without sharing class GetLeaveDetailsController {
     public String URL { get;set; }

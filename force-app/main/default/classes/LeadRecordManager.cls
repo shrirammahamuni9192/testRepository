@@ -1,11 +1,11 @@
 /*
  * 
 Class Name : LeadRecordManager
-Use : To process the lead data received from third party according to request of user
+Use : To process the lead data received from third party according to request of user.
 
 Change Log 
 Date				Description						User
-17 May 2022			Initital Version				Shriram M
+17th May 2022			Initital Version				Shriram M
 
 */
 

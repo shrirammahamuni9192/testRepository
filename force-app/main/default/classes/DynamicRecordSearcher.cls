@@ -4,9 +4,9 @@ Use : to get the data from objects as per the search criteria
 Owner : Shriram M
 Update history : 
 Sr No		Description				Date				Updated by
-1			Initial version			31 May 2022			Shriram M
-*/
-
+1			Initial version			31 May 2022			Shriram  M
+ */
+ 
 
 public without sharing class DynamicRecordSearcher {
     
