@@ -1,7 +1,3 @@
 This first git demo.
+12334
 
-<<<<<<< HEAD
-Added few more lines 123
-=======
-Added few more lines 456
->>>>>>> master
