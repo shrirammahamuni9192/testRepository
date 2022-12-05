@@ -1,1 +1,6 @@
-This is demo for fetch command.  File created on server and fetching it to local.
+few changes
+This is demo for fetch command.  
+File created on server and fetching it to local.
+
+
+Local changes
