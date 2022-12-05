@@ -1,3 +1,5 @@
+//Controller for GetLeaveDetailsController component
+
 public without sharing class GetLeaveDetailsController {
     public String URL { get;set; }
     public String RecordId { get;set; }
@@ -88,4 +90,4 @@ return RecordId;
 }
 */
     
-}
+} 
