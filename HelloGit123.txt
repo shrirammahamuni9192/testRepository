@@ -1,3 +1,9 @@
 This first git demo.
+<<<<<<< HEAD
 12334
 change updated
+=======
+
+Added few more lines 789
+123
+>>>>>>> master
